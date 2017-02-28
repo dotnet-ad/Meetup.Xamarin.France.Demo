@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{8A2B8628-98E8-4BB9-A346-464655DAF2D8}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Meetup.Xamarin.France.Testing.Views.iOS</RootNamespace>
+    <AssemblyName>Meetup.Xamarin.France.Testing.Views.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IOSDebuggerPort>36696</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\packages\PInvoke.Kernel32.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt">
+      <HintPath>..\packages\PInvoke.BCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt">
+      <HintPath>..\packages\PInvoke.NCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\packages\Validation.2.2.8\lib\dotnet\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto">
+      <HintPath>..\packages\PCLCrypto.2.0.147\lib\xamarinios10\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth">
+      <HintPath>..\packages\Xamarin.Auth.1.3.2.1\lib\Xamarin.iOS10\Xamarin.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3">
+      <HintPath>..\packages\Xamarin.Swift3.3.0.0\lib\xamarinios10\Xamarin.Swift3.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.Core">
+      <HintPath>..\packages\Xamarin.Swift3.Core.3.0.2\lib\xamarinios10\Xamarin.Swift3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.CoreGraphics">
+      <HintPath>..\packages\Xamarin.Swift3.CoreGraphics.3.0.2\lib\xamarinios10\Xamarin.Swift3.CoreGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.CoreImage">
+      <HintPath>..\packages\Xamarin.Swift3.CoreImage.3.0.2\lib\xamarinios10\Xamarin.Swift3.CoreImage.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.Darwin">
+      <HintPath>..\packages\Xamarin.Swift3.Darwin.3.0.2\lib\xamarinios10\Xamarin.Swift3.Darwin.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.Dispatch">
+      <HintPath>..\packages\Xamarin.Swift3.Dispatch.3.0.2\lib\xamarinios10\Xamarin.Swift3.Dispatch.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.Foundation">
+      <HintPath>..\packages\Xamarin.Swift3.Foundation.3.0.2\lib\xamarinios10\Xamarin.Swift3.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.ObjectiveC">
+      <HintPath>..\packages\Xamarin.Swift3.ObjectiveC.3.0.2\lib\xamarinios10\Xamarin.Swift3.ObjectiveC.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.QuartzCore">
+      <HintPath>..\packages\Xamarin.Swift3.QuartzCore.3.0.2\lib\xamarinios10\Xamarin.Swift3.QuartzCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.SIMD">
+      <HintPath>..\packages\Xamarin.Swift3.SIMD.3.0.2\lib\xamarinios10\Xamarin.Swift3.SIMD.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Swift3.UIKit">
+      <HintPath>..\packages\Xamarin.Swift3.UIKit.3.0.2\lib\xamarinios10\Xamarin.Swift3.UIKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Xam.Hero">
+      <HintPath>..\packages\Xam.Hero.0.3.1.0\lib\Xamarin.iOS10\Xam.Hero.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.2\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.8\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.8\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.3\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK">
+      <HintPath>..\packages\HockeySDK.Xamarin.4.1.1\lib\Xamarin.iOS10\HockeySDK.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK.iOSBindings">
+      <HintPath>..\packages\HockeySDK.Xamarin.4.1.1\lib\Xamarin.iOS10\HockeySDK.iOSBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Faker.Portable">
+      <HintPath>..\packages\Faker.Portable.0.5.1\lib\portable-net45+win8+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Faker.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Slice 1.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Slice 1%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Slice 1%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_date_range.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_date_range.imageset\ic_date_range.png" />
+    <ImageAsset Include="Assets.xcassets\ic_date_range.imageset\ic_date_range_2x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_date_range.imageset\ic_date_range_3x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_info.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_info.imageset\ic_info.png" />
+    <ImageAsset Include="Assets.xcassets\ic_info.imageset\ic_info_2x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_info.imageset\ic_info_3x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\ic_people.png" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\ic_people_2x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_people.imageset\ic_people_3x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_rowing.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_rowing.imageset\ic_rowing_36pt.png" />
+    <ImageAsset Include="Assets.xcassets\ic_rowing.imageset\ic_rowing_36pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_rowing.imageset\ic_rowing_36pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="Theming\" />
+    <Folder Include="Assets.xcassets\Logo.imageset\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\" />
+    <Folder Include="Sources\" />
+    <Folder Include="Views\Cells\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\Cells\EventCell.xib" />
+    <InterfaceDefinition Include="Views\Cells\MemberCell.xib" />
+    <InterfaceDefinition Include="Views\Cells\AnswerCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewControllers\HomeViewController.cs" />
+    <Compile Include="ViewControllers\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MeetupsViewController.cs" />
+    <Compile Include="ViewControllers\MeetupsViewController.designer.cs">
+      <DependentUpon>MeetupsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MembersViewController.cs" />
+    <Compile Include="ViewControllers\MembersViewController.designer.cs">
+      <DependentUpon>MembersViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Theming\Theme.cs" />
+    <Compile Include="Theming\ThemePlatform.cs" />
+    <Compile Include="ViewControllers\InfoViewController.cs" />
+    <Compile Include="ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ViewControllerBase.cs" />
+    <Compile Include="Services\Authentication.cs" />
+    <Compile Include="Views\LoadingLayerView.cs" />
+    <Compile Include="Sources\Source.cs" />
+    <Compile Include="Views\Cells\ICell.cs" />
+    <Compile Include="Sources\SourceExtensions.cs" />
+    <Compile Include="Views\Cells\EventCell.cs" />
+    <Compile Include="Views\Cells\EventCell.designer.cs">
+      <DependentUpon>EventCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\MemberCell.cs" />
+    <Compile Include="Views\Cells\MemberCell.designer.cs">
+      <DependentUpon>MemberCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\EventViewController.cs" />
+    <Compile Include="ViewControllers\EventViewController.designer.cs">
+      <DependentUpon>EventViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MemberViewController.cs" />
+    <Compile Include="ViewControllers\MemberViewController.designer.cs">
+      <DependentUpon>MemberViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\AnswerCell.cs" />
+    <Compile Include="Views\Cells\AnswerCell.designer.cs">
+      <DependentUpon>AnswerCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\GroupedSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Meetup.Xamarin.France.Testing.Services\Meetup.Xamarin.France.Testing.Services.csproj">
+      <Project>{19B4BAB0-52C2-409E-B81C-0AC3A1169677}</Project>
+      <Name>Meetup.Xamarin.France.Testing.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Meetup.Xamarin.France.Testing.ViewModels\Meetup.Xamarin.France.Testing.ViewModels.csproj">
+      <Project>{B568D275-1ED7-429A-8B20-7E5636808796}</Project>
+      <Name>Meetup.Xamarin.France.Testing.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Meetup.Xamarin.France.Testing.Services.Demo\Meetup.Xamarin.France.Testing.Services.Demo.csproj">
+      <Project>{CE0BBCEB-1A2E-4ACF-8497-B24E7B11FB05}</Project>
+      <Name>Meetup.Xamarin.France.Testing.Services.Demo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Xamarin.Swift3.3.0.0\build\Xamarin.Swift3.targets" Condition="Exists('..\packages\Xamarin.Swift3.3.0.0\build\Xamarin.Swift3.targets')" />
+</Project>
